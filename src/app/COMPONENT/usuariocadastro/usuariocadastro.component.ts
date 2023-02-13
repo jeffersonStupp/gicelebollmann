@@ -15,29 +15,32 @@ export class UsuariocadastroComponent implements OnInit {
 
   Cadastrar(){
 
-if(this.nome=""){
+if(this.nome.length<3){
   alert("Nome invalido")
 
-}else if(this.nome.length<3){
-  alert("nome invalido")
+
 }else{
 
   console.log("nome:" , this.nome)
 }
-if(this.email=""){
+if(this.email.length<3){
   alert("E-Mail invalido")
 
-}else if(this.email.indexOf("@")){
-  alert("E-Mail invalido")
+
 }else{
   console.log("email:" , this.email)
 
+}
+if(this.password != this.confpass){
+  alert("Senhas Invalidas")
+}else{
+  console.log("password:" , this.password)
 }
 
 
   // console.log("telefone:" , this.telefone)
   // console.log("nickname:" , this.nickname)
-  // console.log("password:" , this.password)
+  //
 
   }
 
