@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { NgModel } from '@angular/forms';
 
 @Component({
@@ -7,6 +7,7 @@ import { NgModel } from '@angular/forms';
   styleUrls: ['./usuariocadastro.component.css']
 })
 export class UsuariocadastroComponent implements OnInit {
+  @Output() aocadastrar = new EventEmitter<any>();
   nome:string="";
   email:string="";
   telefone:string="";
@@ -49,6 +50,7 @@ if(this.password != this.confpass){
 }else{
   console.log("password:" , this.password)
     }
+    this.aocadastrar.emit({nome:this.nome, email:this.email, telefone:this.telefone, nickname:this.nickname, password:this.password})
 
 
 
