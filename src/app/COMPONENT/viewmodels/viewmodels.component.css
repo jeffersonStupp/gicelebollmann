@@ -5,10 +5,12 @@
   justify-content: center;
   background-color: rgb(255, 255, 255);
   margin: 0;
+  margin-top: 20px;
 }
 .container{
+margin: auto;
   display: flex;
-  max-width: 100%;
+  max-width: 87%;
 }
 .box{
   display: flex;

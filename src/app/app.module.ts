@@ -5,18 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './COMPONENT/navbar/navbar.component';
 import { HomeComponent } from './COMPONENT/home/home.component';
-import { CarrosselComponent } from './COMPONENT/carrossel/carrossel.component';
+
 import { UsuariocadastroComponent } from './COMPONENT/usuariocadastro/usuariocadastro.component';
 import { ViewmodelsComponent } from './COMPONENT/viewmodels/viewmodels.component';
+import { FooterComponent } from './COMPONENT/footer/footer.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    CarrosselComponent,
+
     UsuariocadastroComponent,
-    ViewmodelsComponent
+    ViewmodelsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
