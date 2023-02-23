@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { NgModel } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-usuariocadastro',
@@ -35,7 +36,7 @@ alert("E-Mail invalido")
   console.log("email:" , this.email)
 }
 this.telefone=this.telefone
-if(this.telefone.length<=11){
+if(this.telefone.length<=10){
   alert("Numero de telefone inválido")
 }else{
   console.log("telefone:" , this.telefone)
@@ -47,6 +48,8 @@ this.confpass=this.confpass;
 
 if(this.password != this.confpass){
   alert("Senhas Invalidas")
+}else if (this.password.length<6){
+  alert("voçê precisa ter pelo menos 6 caracteres")
 }else{
   console.log("password:" , this.password)
     }
